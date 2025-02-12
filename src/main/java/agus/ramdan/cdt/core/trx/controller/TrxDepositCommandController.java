@@ -1,9 +1,9 @@
 package agus.ramdan.cdt.core.trx.controller;
 
-import agus.ramdan.cdt.core.trx.service.TrxDepositCommandService;
 import agus.ramdan.cdt.core.trx.dto.command.CreateTrxDepositCommandDTO;
 import agus.ramdan.cdt.core.trx.dto.command.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.dto.command.UpdateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.service.TrxDepositCommandService;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/cdm/core/deposit/command")
+@RequestMapping("/api/cdt/core/trx/deposit/command")
 @RequiredArgsConstructor
 @Log4j2
 public class TrxDepositCommandController {

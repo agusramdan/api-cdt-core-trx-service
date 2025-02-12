@@ -1,9 +1,8 @@
 package agus.ramdan.cdt.core.trx.controller;
 
+import agus.ramdan.cdt.core.trx.base.BaseReadController;
 import agus.ramdan.cdt.core.trx.domain.TrxDeposit;
 import agus.ramdan.cdt.core.trx.exception.ResourceNotFoundException;
-import agus.ramdan.cdt.core.trx.base.BaseReadController;
-import agus.ramdan.cdt.core.trx.dto.TrxDepositMapper;
 import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -21,14 +20,13 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/cdm/core/deposit")
+@RequestMapping("/api/cdt/core/trx/deposit")
 @RequiredArgsConstructor
 @Log4j2
 public class TrxDepositController implements BaseReadController<TrxDeposit, UUID> {
 
     @Getter
     private final TrxDepositRepository repository;
-    private final TrxDepositMapper mapper;
 
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation",

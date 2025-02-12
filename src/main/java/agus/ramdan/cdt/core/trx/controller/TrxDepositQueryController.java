@@ -1,7 +1,7 @@
 package agus.ramdan.cdt.core.trx.controller;
 
-import agus.ramdan.cdt.core.trx.service.TrxDepositQueryService;
 import agus.ramdan.cdt.core.trx.dto.query.TrxDepositQueryDTO;
+import agus.ramdan.cdt.core.trx.service.TrxDepositQueryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/cdm/core/deposit/query")
+@RequestMapping("/api/cdt/core/trx/deposit/query")
 @RequiredArgsConstructor
 @Log4j2
 public class TrxDepositQueryController {

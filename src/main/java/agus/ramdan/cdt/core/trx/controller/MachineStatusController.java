@@ -1,9 +1,9 @@
 package agus.ramdan.cdt.core.trx.controller;
 
 
+import agus.ramdan.cdt.core.trx.domain.MachineStatus;
 import agus.ramdan.cdt.core.trx.exception.BadRequestException;
 import agus.ramdan.cdt.core.trx.exception.ResourceNotFoundException;
-import agus.ramdan.cdt.core.trx.domain.MachineStatus;
 import agus.ramdan.cdt.core.trx.repository.MachineStatusRepository;
 import agus.ramdan.cdt.core.trx.utils.BaseSpecifications;
 import agus.ramdan.cdt.core.trx.utils.BaseSpecificationsBuilder;
@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
  *
  */
 @RestController
-@RequestMapping("/api/cdm/core/status")
+@RequestMapping("/api/cdt/core/event/status")
 @RequiredArgsConstructor
 @Validated
 public class MachineStatusController {

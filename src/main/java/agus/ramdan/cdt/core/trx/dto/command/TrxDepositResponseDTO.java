@@ -31,7 +31,12 @@ public class TrxDepositResponseDTO {
     private String machine_deposit_code;
     private String machine_deposit_sn;
 
+    private String cdm_trx_no;
+    private LocalDateTime cdm_trx_date;
+    private LocalDateTime cdm_trx_time;
+
     private BigDecimal amount;
+
     private List<TrxDepositDenominationResponseDTO> denominations;
 }
 

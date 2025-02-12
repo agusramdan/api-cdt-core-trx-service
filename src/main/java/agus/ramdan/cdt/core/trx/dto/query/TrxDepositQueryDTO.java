@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,6 +15,7 @@ import java.util.UUID;
 public class TrxDepositQueryDTO {
     private UUID id;
     private String token;
+    private String status;
 
     private String service_transaction_id;
     private String service_transaction_no;
@@ -25,7 +27,13 @@ public class TrxDepositQueryDTO {
     private String machine_deposit_id;
     private String machine_deposit_code;
     private String machine_deposit_sn;
+
+    private String cdm_trx_no;
+    private LocalDateTime cdm_trx_date;
+    private LocalDateTime cdm_trx_time;
+
     private BigDecimal amount;
+
     private List<TrxDepositDenominationQueryDTO> denominations;
 }
 
