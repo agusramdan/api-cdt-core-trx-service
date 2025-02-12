@@ -1,0 +1,56 @@
+---
+spring:
+  application:
+    name: API-CDM-CORE-SERVICE
+
+---
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+
+spring:
+  config:
+    use-legacy-processing: true
+  jmx:
+    enabled: true
+
+  main:
+    lazy-initialization: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/deposit_machine
+    username: dm_user
+    password: dm_user
+
+  jpa:
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate.ddl-auto: validate
+
+    properties:
+      org:
+        hibernate:
+          envers:
+            audit_table_suffix: _hist
+            #revision_field_name: rev
+            #revision_type_field_name: revtype
+            store_data_at_delete: true
+
+  flyway:
+    enabled: false
+
+  zipkin:
+    enabled: false
+
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+
+feign:
+  hystrix:
+    enabled: true
+
+security:
+  basic:
+    enable: false

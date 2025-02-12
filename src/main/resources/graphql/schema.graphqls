@@ -1,0 +1,34 @@
+type TrxDeposit {
+    id: ID!
+    token: String
+    status: String
+    amount: Float
+    createdOn: String
+    updatedOn: String
+}
+
+input CreateTrxDepositInput {
+    token: String!
+    signature: String!
+    serviceTransactionId: String!
+    serviceTransactionNo: String!
+    serviceProductId: String!
+    serviceProductCode: String!
+    serviceProductName: String!
+    amount: Float!
+}
+
+input UpdateTrxDepositInput {
+    id: ID!
+    status: String!
+}
+
+type Query {
+    getTrxDepositById(id: ID!): TrxDeposit
+    getAllTrxDeposits: [TrxDeposit]
+}
+
+type Mutation {
+    createTrxDeposit(input: CreateTrxDepositInput!): TrxDeposit
+    updateTrxDeposit(input: UpdateTrxDepositInput!): TrxDeposit
+}

@@ -1,0 +1,13 @@
+spring:
+  zipkin:
+    base-url: http://zipkin:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0  # 100% request akan ditrace
+
+logging:
+  level:
+    root: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"
