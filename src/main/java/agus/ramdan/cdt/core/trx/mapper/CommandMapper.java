@@ -2,10 +2,10 @@ package agus.ramdan.cdt.core.trx.mapper;
 
 import agus.ramdan.cdt.core.trx.domain.TrxDeposit;
 import agus.ramdan.cdt.core.trx.domain.TrxDepositDenomination;
-import agus.ramdan.cdt.core.trx.dto.command.CreateTrxDepositCommandDTO;
-import agus.ramdan.cdt.core.trx.dto.command.CreateTrxDepositDenominationDTO;
-import agus.ramdan.cdt.core.trx.dto.command.TrxDepositDenominationResponseDTO;
-import agus.ramdan.cdt.core.trx.dto.command.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositDenominationDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositDenominationResponseDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

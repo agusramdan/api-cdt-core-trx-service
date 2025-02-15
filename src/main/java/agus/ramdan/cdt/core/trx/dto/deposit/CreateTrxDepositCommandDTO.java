@@ -1,4 +1,4 @@
-package agus.ramdan.cdt.core.trx.dto.command;
+package agus.ramdan.cdt.core.trx.dto.deposit;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,18 +7,13 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TrxDepositResponseDTO {
-    private UUID id;
+public class CreateTrxDepositCommandDTO {
     private String token;
-    private String status;
-
-    private LocalDateTime createdOn;
-    private LocalDateTime updatedOn;
+    private String signature;
 
     private String service_transaction_id;
     private String service_transaction_no;
@@ -36,7 +31,5 @@ public class TrxDepositResponseDTO {
     private LocalDateTime cdm_trx_time;
 
     private BigDecimal amount;
-
-    private List<TrxDepositDenominationResponseDTO> denominations;
+    private List<CreateTrxDepositDenominationDTO> denominations;
 }
-

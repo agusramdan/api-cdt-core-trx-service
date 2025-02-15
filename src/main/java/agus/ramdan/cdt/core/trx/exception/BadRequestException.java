@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 @Getter
-public class BadRequestException extends Exception {
+public class BadRequestException extends RuntimeException {
     private static final long serialVersionUID = 1L;
     private ErrorValidation[] errors;
 

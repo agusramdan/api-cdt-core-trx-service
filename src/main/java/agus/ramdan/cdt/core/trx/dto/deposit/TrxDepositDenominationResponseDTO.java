@@ -1,4 +1,4 @@
-package agus.ramdan.cdt.core.trx.dto.command;
+package agus.ramdan.cdt.core.trx.dto.deposit;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package agus.ramdan.cdt.core.trx.resolver;
 
-import agus.ramdan.cdt.core.trx.dto.query.TrxDepositQueryDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.service.TrxDepositQueryService;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.RequiredArgsConstructor;
@@ -13,12 +13,12 @@ import java.util.UUID;
 public class TrxDepositQueryResolver implements GraphQLQueryResolver {
     private final TrxDepositQueryService service;
 
-    public TrxDepositQueryDTO getTrxDepositById(UUID id) {
+    public TrxDepositResponseDTO getTrxDepositById(UUID id) {
         System.out.println("GraphQL Query getTrxDepositById dipanggil dengan ID: " + id);
         return service.getTrxDepositById(id);
     }
 
-    public List<TrxDepositQueryDTO> getAllTrxDeposits() {
+    public List<TrxDepositResponseDTO> getAllTrxDeposits() {
         System.out.println("GraphQL Query getAllTrxDeposits dipanggil");
         return service.getAllTrxDeposits();
     }

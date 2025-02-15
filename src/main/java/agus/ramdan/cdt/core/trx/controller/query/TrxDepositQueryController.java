@@ -1,6 +1,6 @@
-package agus.ramdan.cdt.core.trx.controller;
+package agus.ramdan.cdt.core.trx.controller.query;
 
-import agus.ramdan.cdt.core.trx.dto.query.TrxDepositQueryDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.service.TrxDepositQueryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -21,12 +21,12 @@ public class TrxDepositQueryController {
     private final TrxDepositQueryService service;
 
     @GetMapping
-    public ResponseEntity<List<TrxDepositQueryDTO>> getAll() {
+    public ResponseEntity<List<TrxDepositResponseDTO>> getAll() {
         return ResponseEntity.ok(service.getAllTrxDeposits());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TrxDepositQueryDTO> getById(@PathVariable UUID id) {
+    public ResponseEntity<TrxDepositResponseDTO> getById(@PathVariable UUID id) {
         return ResponseEntity.ok(service.getTrxDepositById(id));
     }
 }

@@ -1,8 +1,8 @@
-package agus.ramdan.cdt.core.trx.controller;
+package agus.ramdan.cdt.core.trx.controller.command;
 
-import agus.ramdan.cdt.core.trx.dto.command.CreateTrxDepositCommandDTO;
-import agus.ramdan.cdt.core.trx.dto.command.TrxDepositResponseDTO;
-import agus.ramdan.cdt.core.trx.dto.command.UpdateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.UpdateTrxDepositCommandDTO;
 import agus.ramdan.cdt.core.trx.service.TrxDepositCommandService;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -10,7 +10,7 @@
     </parent>
     <groupId>agus.ramdan.cdt</groupId>
     <artifactId>api-cdt-core-trx-service</artifactId>
-    <version>2.7.16.1.20250213</version>
+    <version>2.7.16.1.20250216</version>
     <name>Api Cash Deposit Transfer Core Transaction Service</name>
     <description>API CDM CORE Service</description>
     <properties>

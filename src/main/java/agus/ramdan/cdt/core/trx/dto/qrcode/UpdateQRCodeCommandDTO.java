@@ -1,4 +1,4 @@
-package agus.ramdan.cdt.core.trx.dto.command;
+package agus.ramdan.cdt.core.trx.dto.qrcode;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateTrxDepositCommandDTO {
+public class UpdateQRCodeCommandDTO {
     private UUID id;
-    private String status;
+    private boolean active;
 }
-

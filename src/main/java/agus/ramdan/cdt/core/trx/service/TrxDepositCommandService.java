@@ -1,9 +1,9 @@
 package agus.ramdan.cdt.core.trx.service;
 
 import agus.ramdan.cdt.core.trx.domain.TrxDeposit;
-import agus.ramdan.cdt.core.trx.dto.command.CreateTrxDepositCommandDTO;
-import agus.ramdan.cdt.core.trx.dto.command.TrxDepositResponseDTO;
-import agus.ramdan.cdt.core.trx.dto.command.UpdateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.UpdateTrxDepositCommandDTO;
 import agus.ramdan.cdt.core.trx.mapper.CommandMapper;
 import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
 import lombok.RequiredArgsConstructor;

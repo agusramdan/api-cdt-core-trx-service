@@ -1,6 +1,6 @@
 package agus.ramdan.cdt.core.trx.service;
 
-import agus.ramdan.cdt.core.trx.dto.query.TrxDepositQueryDTO;
+import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.mapper.QueryMapper;
 import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,11 +15,11 @@ public class TrxDepositQueryService {
     private final TrxDepositRepository repository;
     private final QueryMapper queryMapper;
 
-    public List<TrxDepositQueryDTO> getAllTrxDeposits() {
+    public List<TrxDepositResponseDTO> getAllTrxDeposits() {
         return queryMapper.toDtoList(repository.findAll());
     }
 
-    public TrxDepositQueryDTO getTrxDepositById(UUID id) {
+    public TrxDepositResponseDTO getTrxDepositById(UUID id) {
         return repository.findById(id)
                 .map(queryMapper::toDto)
                 .orElseThrow(() -> new RuntimeException("Transaction not found"));
