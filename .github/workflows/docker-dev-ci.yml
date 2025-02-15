@@ -35,6 +35,6 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:${{ env.VERSION }} .
-          docker tag ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:${{ env.VERSION }} ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:latest
+          docker tag ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:${{ env.VERSION }} ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:dev
           docker push ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:${{ env.VERSION }}
           docker push ${{ secrets.DOCKER_USERNAME }}/api-cdt-core-trx-service:dev
