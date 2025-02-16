@@ -1,11 +1,11 @@
 package agus.ramdan.cdt.core.trx.service;
 
-import agus.ramdan.cdt.core.trx.domain.TrxDeposit;
-import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositCommandDTO;
-import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
-import agus.ramdan.cdt.core.trx.dto.deposit.UpdateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositCreateDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositUpdateDTO;
 import agus.ramdan.cdt.core.trx.mapper.CommandMapper;
-import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
+import agus.ramdan.cdt.core.trx.persistence.domain.TrxDeposit;
+import agus.ramdan.cdt.core.trx.persistence.repository.TrxDepositRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import lombok.val;
@@ -21,7 +21,7 @@ public class TrxDepositCommandService {
     private final TrxDepositRepository repository;
     private final CommandMapper commandMapper;
 
-    public TrxDepositResponseDTO createTrxDeposit(CreateTrxDepositCommandDTO dto) {
+    public TrxDepositResponseDTO createTrxDeposit(TrxDepositCreateDTO dto) {
         val option_trx = repository.findByTokenAndSignature(dto.getToken(), dto.getSignature());
         if (option_trx.isPresent()){
             log.info("Resend detected Token and Signature");
@@ -32,7 +32,7 @@ public class TrxDepositCommandService {
         }).map(commandMapper::toResponseDto).orElse(null);
     }
 
-    public TrxDepositResponseDTO updateTrxDeposit(UpdateTrxDepositCommandDTO dto) {
+    public TrxDepositResponseDTO updateTrxDeposit(TrxDepositUpdateDTO dto) {
         TrxDeposit trxDeposit = repository.findById(dto.getId())
                 .orElseThrow(() -> new RuntimeException("Transaction not found"));
         trxDeposit.setStatus(dto.getStatus());

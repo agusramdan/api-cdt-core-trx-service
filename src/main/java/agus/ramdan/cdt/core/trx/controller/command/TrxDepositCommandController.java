@@ -1,8 +1,8 @@
 package agus.ramdan.cdt.core.trx.controller.command;
 
-import agus.ramdan.cdt.core.trx.dto.deposit.CreateTrxDepositCommandDTO;
-import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
-import agus.ramdan.cdt.core.trx.dto.deposit.UpdateTrxDepositCommandDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositCreateDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositUpdateDTO;
 import agus.ramdan.cdt.core.trx.service.TrxDepositCommandService;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -28,7 +28,7 @@ public class TrxDepositCommandController {
             @ApiResponse(description = "successful operation", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = TrxDepositResponseDTO.class)),})
     })
-    public ResponseEntity<TrxDepositResponseDTO> create(@RequestBody CreateTrxDepositCommandDTO dto) {
+    public ResponseEntity<TrxDepositResponseDTO> create(@RequestBody TrxDepositCreateDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.createTrxDeposit(dto));
     }
 
@@ -37,7 +37,7 @@ public class TrxDepositCommandController {
             @ApiResponse(description = "successful operation", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = TrxDepositResponseDTO.class)),})
     })
-    public ResponseEntity<TrxDepositResponseDTO> update(@RequestBody UpdateTrxDepositCommandDTO dto) {
+    public ResponseEntity<TrxDepositResponseDTO> update(@RequestBody TrxDepositUpdateDTO dto) {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.updateTrxDeposit(dto));
     }
 

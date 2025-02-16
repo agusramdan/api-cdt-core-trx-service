@@ -1,6 +1,6 @@
 package agus.ramdan.cdt.core.trx.controller.query;
 
-import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.service.TrxDepositQueryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

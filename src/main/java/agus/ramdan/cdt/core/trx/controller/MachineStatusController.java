@@ -1,14 +1,14 @@
 package agus.ramdan.cdt.core.trx.controller;
 
 
-import agus.ramdan.cdt.core.trx.domain.MachineStatus;
-import agus.ramdan.cdt.core.trx.exception.BadRequestException;
-import agus.ramdan.cdt.core.trx.exception.ResourceNotFoundException;
-import agus.ramdan.cdt.core.trx.repository.MachineStatusRepository;
-import agus.ramdan.cdt.core.trx.utils.BaseSpecifications;
-import agus.ramdan.cdt.core.trx.utils.BaseSpecificationsBuilder;
-import agus.ramdan.cdt.core.trx.utils.ChekUtils;
-import agus.ramdan.cdt.core.trx.utils.OffsetBasedPageRequest;
+import agus.ramdan.base.exception.BadRequestException;
+import agus.ramdan.base.exception.ResourceNotFoundException;
+import agus.ramdan.base.utils.BaseSpecifications;
+import agus.ramdan.base.utils.BaseSpecificationsBuilder;
+import agus.ramdan.base.utils.ChekUtils;
+import agus.ramdan.base.utils.OffsetBasedPageRequest;
+import agus.ramdan.cdt.core.trx.persistence.domain.MachineStatus;
+import agus.ramdan.cdt.core.trx.persistence.repository.MachineStatusRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;

@@ -1,9 +1,9 @@
 package agus.ramdan.cdt.core.trx.controller;
 
-import agus.ramdan.cdt.core.trx.base.BaseReadController;
-import agus.ramdan.cdt.core.trx.domain.TrxDeposit;
-import agus.ramdan.cdt.core.trx.exception.ResourceNotFoundException;
-import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
+import agus.ramdan.base.controller.BaseReadController;
+import agus.ramdan.base.exception.ResourceNotFoundException;
+import agus.ramdan.cdt.core.trx.persistence.domain.TrxDeposit;
+import agus.ramdan.cdt.core.trx.persistence.repository.TrxDepositRepository;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,8 +1,8 @@
 package agus.ramdan.cdt.core.trx.service;
 
-import agus.ramdan.cdt.core.trx.dto.deposit.TrxDepositResponseDTO;
+import agus.ramdan.cdt.core.trx.controller.dto.deposit.TrxDepositResponseDTO;
 import agus.ramdan.cdt.core.trx.mapper.QueryMapper;
-import agus.ramdan.cdt.core.trx.repository.TrxDepositRepository;
+import agus.ramdan.cdt.core.trx.persistence.repository.TrxDepositRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
